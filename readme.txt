@@ -1,4 +1,5 @@
-Steps 1) Create a directory in your disk: "C:/AHK/FFBE/" 
+Steps 
+1) Create a directory in your disk: "C:/AHK/FFBE/" 
 2) Download and place these files in there 
 3) Download and Install AutoHotkey 
 4) Download and Install BlueStacks 
