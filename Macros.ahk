@@ -26,9 +26,9 @@ Loop
 	startUp()
 	checkStatus()
 
-	earthShrine()
+	;earthShrine()
 	;theHangingEdge(adv)
-	;zadelWesterland()
+	zadelWesterland()
 	;marandaCoast()
 	;marandaCoastZone1()
 	;marandaCoastZone2()
@@ -1273,7 +1273,7 @@ findVortex(){
 }
 
 clickWorld(){
-	ImageSearch, FoundX, FoundY, 475, 450, 875, 625, *100 C:\AHK\FFBE\Images\world.png
+	ImageSearch, FoundX, FoundY, 475, 450, 875, 625, *100 C:\AHK\FFBE\Images\world2.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
@@ -1283,7 +1283,7 @@ clickWorld(){
 }
 
 findWorld(){
-	ImageSearch, FoundX, FoundY, 475, 450, 875, 625, *100 C:\AHK\FFBE\Images\world.png
+	ImageSearch, FoundX, FoundY, 475, 450, 875, 625, *100 C:\AHK\FFBE\Images\world2.png
 	
 	if(FoundX>0){	
 		return true
