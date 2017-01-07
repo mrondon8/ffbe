@@ -26,9 +26,9 @@ Loop
 	startUp()
 	checkStatus()
 
-	;earthShrine()
+	earthShrine()
 	;theHangingEdge(adv)
-	zadelWesterland()
+	;zadelWesterland()
 	;marandaCoast()
 	;marandaCoastZone1()
 	;marandaCoastZone2()
@@ -119,7 +119,7 @@ theHangingEdge(level){
 }
 
 clickClose(){
-	ImageSearch, FoundX, FoundY, 485, 115, 865, 700, *100 C:\AHK\FFBE\Images\close.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\close.png
 
 	if(debug==true)
 	{
@@ -139,7 +139,7 @@ clickClose(){
 }
 
 findClose(){
-	ImageSearch, FoundX, FoundY, 485, 115, 865, 700, *100 C:\AHK\FFBE\Images\close.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\close.png
 
 	if(debug==true)
 	{
@@ -159,7 +159,7 @@ findClose(){
 }
 
 clickPro(){
-	ImageSearch, FoundX, FoundY, 485, 115, 865, 700, *100 C:\AHK\FFBE\Images\pro.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\pro.png
 
 	if(FoundX>0){
 		Click %FoundX% %FoundY%
@@ -169,7 +169,7 @@ clickPro(){
 }
 
 findPro(){
-	ImageSearch, FoundX, FoundY, 485, 115, 865, 700, *100 C:\AHK\FFBE\Images\pro.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\pro.png
 
 	if(FoundX>0){
 		return true
@@ -179,7 +179,7 @@ findPro(){
 }
 
 clickAdv(){
-	ImageSearch, FoundX, FoundY, 485, 115, 865, 700, *100 C:\AHK\FFBE\Images\adv.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\adv.png
 
 	if(FoundX>0){
 		Click %FoundX% %FoundY%
@@ -189,7 +189,7 @@ clickAdv(){
 }
 
 findAdv(){
-	ImageSearch, FoundX, FoundY, 485, 115, 865, 700, *100 C:\AHK\FFBE\Images\adv.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\adv.png
 
 	if(FoundX>0){
 		return true
@@ -199,7 +199,7 @@ findAdv(){
 }
 
 clickHangingEdge(){
-	ImageSearch, FoundX, FoundY, 485, 115, 865, 700, *100 C:\AHK\FFBE\Images\the_hanging_edge.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\the_hanging_edge.png
 
 	if(FoundX>0){
 		Click %FoundX% %FoundY%
@@ -209,7 +209,7 @@ clickHangingEdge(){
 }
 
 findHangingEdge(){
-	ImageSearch, FoundX, FoundY, 485, 115, 865, 700, *100 C:\AHK\FFBE\Images\the_hanging_edge.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\the_hanging_edge.png
 
 	if(FoundX>0){
 		return true
@@ -219,7 +219,7 @@ findHangingEdge(){
 }
 
 isMainMenu(){
-	ImageSearch, FoundX, FoundY, 485, 175, 565, 275, *100 C:\AHK\FFBE\Images\forge.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\forge.png
 
 	if(FoundX>0){
 		return true
@@ -644,7 +644,7 @@ checkStatus(){
 }
 
 checkFight(){
-	ImageSearch, FoundX, FoundY, 765, 665, 860, 715, *100 C:\AHK\FFBE\Images\menu.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\menu.png
 
 	if(FoundX>0){
 		return true
@@ -886,11 +886,17 @@ friendRequest(){
 }
 
 clickUnitExp(){
-	Click 530, 200			
+	ImageSearch, FoundX, FoundY,  480, 40, 880, 720, *100 C:\AHK\FFBE\Images\unit_exp.png
+
+	if(FoundX>0){
+		Click %FoundX%, %FoundY%
+	}
+	else
+		return false			
 }
 
 isUnitExp(){
-	ImageSearch, FoundX, FoundY, 585, 115, 665, 138, *100 C:\AHK\FFBE\Images\unit_exp.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\unit_exp.png
 
 	if(FoundX>0){
 		return true
@@ -900,7 +906,7 @@ isUnitExp(){
 }
 
 clickDepart(){
-	ImageSearch, FoundX, FoundY, 635, 600, 710, 625, *100 C:\AHK\FFBE\Images\depart.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\depart.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
@@ -910,7 +916,7 @@ clickDepart(){
 }
 
 isDepart(){
-	ImageSearch, FoundX, FoundY, 635, 600, 710, 625, *100 C:\AHK\FFBE\Images\depart.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\depart.png
 
 	if(FoundX>0){
 		return true
@@ -920,7 +926,7 @@ isDepart(){
 }
 
 clickFriend(){
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 520, *100 C:\AHK\FFBE\Images\rank.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\rank.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
@@ -930,7 +936,7 @@ clickFriend(){
 }
 
 isFriend(){
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 520, *100 C:\AHK\FFBE\Images\rank.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\rank.png
 
 	if(FoundX>0){
 		return true
@@ -940,21 +946,21 @@ isFriend(){
 }
 
 clickNext(){
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 700, *100 C:\AHK\FFBE\Images\next.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\next.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 500, 475, 820, 675, *100 C:\AHK\FFBE\Images\next1.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\next1.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 500, 475, 820, 675, *100 C:\AHK\FFBE\Images\next2.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\next2.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
@@ -965,19 +971,19 @@ clickNext(){
 }
 
 isNext(){
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 700, *100 C:\AHK\FFBE\Images\next.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\next.png
 
 	if(FoundX>0){
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 500, 475, 820, 675, *100 C:\AHK\FFBE\Images\next1.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\next1.png
 
 	if(FoundX>0){
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 500, 475, 820, 675, *100 C:\AHK\FFBE\Images\next2.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\next2.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
@@ -988,21 +994,21 @@ isNext(){
 }
 
 clickEarthShrineExit(){
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 520, *100 C:\AHK\FFBE\Images\exit.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\exit.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 520, *100 C:\AHK\FFBE\Images\earth_shrine_exit.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\earth_shrine_exit.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 520, *100 C:\AHK\FFBE\Images\earth_shrine_exit2.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\earth_shrine_exit2.png
 	
 	if(FoundX>0){
 		return true
@@ -1012,19 +1018,19 @@ clickEarthShrineExit(){
 }
 
 findEarthShrineExit(){
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 520, *100 C:\AHK\FFBE\Images\exit.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\exit.png
 	
 	if(FoundX>0){
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 520, *100 C:\AHK\FFBE\Images\earth_shrine_exit.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\earth_shrine_exit.png
 	
 	if(FoundX>0){
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 485, 215, 850, 520, *100 C:\AHK\FFBE\Images\earth_shrine_exit2.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\earth_shrine_exit2.png
 	
 	if(FoundX>0){
 		return true
@@ -1035,7 +1041,7 @@ findEarthShrineExit(){
 
 
 clickWestersandExplo(){
-	ImageSearch, FoundX, FoundY, 485, 205, 860, 580, *120 C:\AHK\FFBE\Images\westersand_explo.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\westersand_explo.png
 
 	if(debug==true)
 	{
@@ -1054,7 +1060,7 @@ clickWestersandExplo(){
 }
 
 findWestersandExplo(){
-	ImageSearch, FoundX, FoundY, 485, 205, 860, 580, *120 C:\AHK\FFBE\Images\westersand_explo.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\westersand_explo.png
 
 	if(debug==true)
 	{
@@ -1073,7 +1079,7 @@ findWestersandExplo(){
 }
 
 clickWestersand(){
-	ImageSearch, FoundX, FoundY, 485, 205, 860, 580, *120 C:\AHK\FFBE\Images\westersand.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\westersand.png
 
 	if(debug==true)
 	{
@@ -1092,7 +1098,7 @@ clickWestersand(){
 }
 
 checkWestersand(){
-	ImageSearch, FoundX, FoundY, 485, 205, 860, 580, *120 C:\AHK\FFBE\Images\westersand.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\westersand.png
 
 	if(debug==true)
 	{
@@ -1111,7 +1117,7 @@ checkWestersand(){
 }
 
 inLanzelt(){
-	ImageSearch, FoundX, FoundY, 550, 160, 630, 200, *120 C:\AHK\FFBE\Images\in_lanzelt_isle.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\in_lanzelt_isle.png
 
 	if(debug==true)
 	{
@@ -1130,7 +1136,7 @@ inLanzelt(){
 }
 
 findLanzeltIsles(){
-	ImageSearch, FoundX, FoundY, 485, 325, 650, 550, *120 C:\AHK\FFBE\Images\lanzelt_isles.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\lanzelt_isles.png
 	
 	if(debug==true)
 	{
@@ -1146,7 +1152,7 @@ findLanzeltIsles(){
 		return true
 	}
 
-	ImageSearch, FoundX, FoundY, 490, 210, 850, 420, *120 C:\AHK\FFBE\Images\lanzelt.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\lanzelt.png
 
 	if(debug==true)
 	{
@@ -1168,7 +1174,7 @@ findLanzeltIsles(){
 clickLanzeltIsles(){
 	;Click 650, 265
 
-	ImageSearch, FoundX, FoundY, 485, 325, 650, 550, *120 C:\AHK\FFBE\Images\lanzelt_isles.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\lanzelt_isles.png
 
 	if(debug==true)
 	{
@@ -1184,7 +1190,7 @@ clickLanzeltIsles(){
 		Click %FoundX%, %FoundY%
 	}
 
-	ImageSearch, FoundX, FoundY, 490, 210, 850, 420, *120 C:\AHK\FFBE\Images\lanzelt.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *120 C:\AHK\FFBE\Images\lanzelt.png
 
 	if(debug==true)
 	{
@@ -1207,7 +1213,7 @@ clickLanzeltIsles(){
 clickGrandsheltIsles(){
 	;Click 750, 330
 
-	ImageSearch, FoundX, FoundY, 475, 55, 875, 710, *100 C:\AHK\FFBE\Images\grandshelt_isles.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\grandshelt_isles.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
@@ -1218,7 +1224,7 @@ clickGrandsheltIsles(){
 }
 
 findGrandsheltIsles(){
-	ImageSearch, FoundX, FoundY, 475, 55, 875, 710, *100 C:\AHK\FFBE\Images\grandshelt_isles.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\grandshelt_isles.png
 	
 	if(FoundX>0){
 		return true
@@ -1230,7 +1236,7 @@ findGrandsheltIsles(){
 clickGrandshelt(){
 	;Click 650, 265
 
-	ImageSearch, FoundX, FoundY, 490, 210, 850, 420, *100 C:\AHK\FFBE\Images\grandshelt.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\grandshelt.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
@@ -1242,7 +1248,7 @@ clickGrandshelt(){
 findGrandshelt(){
 ;	return true
 
-	ImageSearch, FoundX, FoundY, 490, 210, 850, 420, *100 C:\AHK\FFBE\Images\grandshelt.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\grandshelt.png
 	;MsgBox, %FoundX%, %FoundY%
 	if(FoundX>0){
 		return true
@@ -1253,7 +1259,7 @@ findGrandshelt(){
 }
 
 clickVortex(){
-	ImageSearch, FoundX, FoundY, 475, 450, 875, 625, *100 C:\AHK\FFBE\Images\vortex.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\vortex.png
 	
 	if(FoundX>0){	
 		Click %FoundX% %FoundY%
@@ -1263,7 +1269,7 @@ clickVortex(){
 }
 
 findVortex(){
-	ImageSearch, FoundX, FoundY, 475, 450, 875, 625, *100 C:\AHK\FFBE\Images\vortex.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\vortex.png
 	
 	if(FoundX>0){	
 		return true
@@ -1273,7 +1279,7 @@ findVortex(){
 }
 
 clickWorld(){
-	ImageSearch, FoundX, FoundY, 475, 450, 875, 625, *100 C:\AHK\FFBE\Images\world2.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\world2.png
 
 	if(FoundX>0){
 		Click %FoundX%, %FoundY%
@@ -1283,7 +1289,7 @@ clickWorld(){
 }
 
 findWorld(){
-	ImageSearch, FoundX, FoundY, 475, 450, 875, 625, *100 C:\AHK\FFBE\Images\world2.png
+	ImageSearch, FoundX, FoundY, 480, 40, 880, 720, *100 C:\AHK\FFBE\Images\world2.png
 	
 	if(FoundX>0){	
 		return true
