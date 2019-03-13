@@ -45,6 +45,14 @@ global highest_ale_y		:= 770
 global sell_button_x		:= 1325
 global sell_button_y		:= 720
 
+;recruit values
+global click_to_make_troops_x := 1670
+global click_to_make_troops_y := 130
+global peasants_x 			:= 475
+global peasants_y 			:= 600
+global archer_x				:= 735
+global archer_y				:= 600
+
 ;timers
 global sleep_timer			:= 2000
 global move_timer			:= 200
@@ -64,7 +72,12 @@ f12::Pause
 sell_food(){
 	Loop 10 {
 		
+
 		click_view_villages()
+
+		click_recruit()
+		click_recruit_archers()
+
 		click_trade()
 		click_trade_food()
 		
@@ -91,8 +104,6 @@ sell_food(){
 		;Vegetables
 		click_lowest_highest(5)
 		click_sell_button()
-
-
 
 		click_next_village()
 	}
@@ -123,6 +134,14 @@ click_view_villages(){
 
 click_trade(){
 	ClickXY(click_to_trade_x, click_to_trade_y)
+}
+
+click_recruit(){
+	ClickXY(click_to_make_troops_x, click_to_make_troops_y)
+}
+
+click_recruit_archers(){
+	ClickXY(archer_x, archer_y)	
 }
 
 
